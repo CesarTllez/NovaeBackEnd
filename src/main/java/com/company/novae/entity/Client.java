@@ -1,5 +1,6 @@
 package com.company.novae.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,7 +31,9 @@ public class Client {
     @Getter
     private String email;
 
-    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, orphanRemoval = true)
+    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER, orphanRemoval = true)
+    @JsonIgnoreProperties("client")
+    @Getter
     private Set<CreditCard> creditCards;
 
     public Client() {
