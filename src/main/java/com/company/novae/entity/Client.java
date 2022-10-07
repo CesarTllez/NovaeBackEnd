@@ -10,7 +10,7 @@ import java.util.Set;
 @Entity
 @Table(name = "client")
 @NamedQuery(name = "Client.update", query = "UPDATE Client c SET c.dni = :dni, c.name = :name, c.email = :email WHERE c.id = :id")
-public class Client {
+public class Client extends Audit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
