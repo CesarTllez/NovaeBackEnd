@@ -26,7 +26,7 @@ public class FranchiseServiceImplementation implements IFranchiseService {
     public Franchise findById(Integer id) {
         if (franchiseRepository.findById(id).isPresent())
             return franchiseRepository.findById(id).get();
-        throw new NotFoundException();
+        throw new NotFoundException("");
     }
 
     @Override
@@ -36,12 +36,15 @@ public class FranchiseServiceImplementation implements IFranchiseService {
 
     @Transactional
     @Override
-    public void updateById(Franchise franchise) {
-        franchiseRepository.updateById(franchise.getId(), franchise.getName());
+    public void update(Franchise franchise) {
+        if (franchiseRepository.countById(franchise.getId()) == 1)
+            franchiseRepository.update(franchise.getId(), franchise.getName());
+        else throw new NotFoundException("");
     }
 
     @Override
     public void deleteById(Integer id) {
-        franchiseRepository.deleteById(id);
+        if (franchiseRepository.countById(id) == 1) franchiseRepository.deleteById(id);
+        else throw new NotFoundException("");
     }
 }

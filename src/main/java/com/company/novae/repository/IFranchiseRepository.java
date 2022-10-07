@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IFranchiseRepository extends JpaRepository<Franchise, Integer> {
     @Modifying
-    public void updateById(@Param("id") Integer id,
+    public void update(@Param("id") Integer id,
                            @Param("name") String name);
+
+    public Long countById(Integer id);
 }

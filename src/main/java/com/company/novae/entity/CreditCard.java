@@ -7,6 +7,13 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "credit_Card")
+@NamedQuery(name = "CreditCard.update", query = "UPDATE CreditCard c SET " +
+        "c.primaryAccountNumber = :primaryAccountNumber, " +
+        "c.expMonth = :expMonth, " +
+        "c.expYear = :expYear, " +
+        "c.securityCode = :securityCode, " +
+        "c.internationalBrand = :internationalBrand " +
+        "WHERE c.id = :id")
 public class CreditCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,15 +25,10 @@ public class CreditCard {
     @Getter
     private Long primaryAccountNumber;
 
-    @Column(name = "holder", nullable = false)
+    @Column(name = "expiration_month", nullable = false)
     @Setter
     @Getter
-    private String holder;
-
-    @Column(name = "expiration_mounth", nullable = false)
-    @Setter
-    @Getter
-    private Byte expMounth;
+    private Byte expMonth;
 
     @Column(name = "expiration_year", nullable = false)
     @Setter
@@ -45,10 +47,12 @@ public class CreditCard {
 
     @ManyToOne
     @JoinColumn(name = "franchise_id", nullable = false)
+    @Getter
     private Franchise franchise;
 
     @ManyToOne
     @JoinColumn(name = "client_id", nullable = false)
+    @Getter
     private Client client;
 
     public CreditCard() {

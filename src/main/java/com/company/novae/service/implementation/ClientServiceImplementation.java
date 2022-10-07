@@ -24,9 +24,10 @@ public class ClientServiceImplementation implements IClientService {
 
     @Override
     public Client findById(Long id) {
-        if (clientRepository.findById(id).isPresent())
+        if (clientRepository.findById(id).isPresent()) {
             return clientRepository.findById(id).get();
-        throw new NotFoundException();
+        }
+        throw new NotFoundException("");
     }
 
     @Override
@@ -36,12 +37,15 @@ public class ClientServiceImplementation implements IClientService {
 
     @Transactional
     @Override
-    public void updateById(Client client) {
-        clientRepository.updateById(client.getId(), client.getName(), client.getEmail());
+    public void update(Client client) {
+        if (clientRepository.countById(client.getId()) == 1)
+            clientRepository.update(client.getId(), client.getDni(), client.getName(), client.getEmail());
+        else throw new NotFoundException("");
     }
 
     @Override
     public void deleteById(Long id) {
-        clientRepository.deleteById(id);
+        if (clientRepository.countById(id) == 1) clientRepository.deleteById(id);
+        else throw new NotFoundException("");
     }
 }

@@ -8,7 +8,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "franchise")
-@NamedQuery(name = "Franchise.updateById", query = "UPDATE Franchise f SET f.name = :name WHERE f.id = :id")
+@NamedQuery(name = "Franchise.update", query = "UPDATE Franchise f SET f.name = :name WHERE f.id = :id")
 public class Franchise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

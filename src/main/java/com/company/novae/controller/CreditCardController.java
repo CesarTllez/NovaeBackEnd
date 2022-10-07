@@ -31,8 +31,8 @@ public class CreditCardController {
     }
 
     @PutMapping
-    public void updateByID(@RequestBody CreditCard client) {
-        creditCardService.updateById(client);
+    public void update(@RequestBody CreditCard client) {
+        creditCardService.update(client);
     }
 
     @DeleteMapping("/{id}")

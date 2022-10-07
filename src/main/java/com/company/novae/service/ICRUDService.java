@@ -9,7 +9,7 @@ public interface ICRUDService<Object, Id, ObjectDto> {
 
     public void create(Object object);
 
-    public void updateById(Object object);
+    public void update(Object object);
 
     public void deleteById(Id id);
 }

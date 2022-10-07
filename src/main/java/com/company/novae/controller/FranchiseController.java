@@ -30,8 +30,8 @@ public class FranchiseController {
     }
 
     @PutMapping
-    public void updateByID(@RequestBody Franchise franchise) {
-        franchiseService.updateById(franchise);
+    public void update(@RequestBody Franchise franchise) {
+        franchiseService.update(franchise);
     }
 
     @DeleteMapping("/{id}")

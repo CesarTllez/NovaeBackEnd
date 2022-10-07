@@ -10,7 +10,10 @@ import org.springframework.stereotype.Repository;
 public interface IClientRepository extends JpaRepository<Client, Long> {
 
     @Modifying
-    public void updateById(@Param("id") Long id,
-                           @Param("name") String name,
-                           @Param("email") String email);
+    public void update(@Param("id") Long id,
+                       @Param("dni") Long dni,
+                       @Param("name") String name,
+                       @Param("email") String email);
+
+    public Long countById(Long id);
 }

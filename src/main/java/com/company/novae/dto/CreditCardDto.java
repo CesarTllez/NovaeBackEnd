@@ -8,8 +8,7 @@ import lombok.Setter;
 public class CreditCardDto {
     private Integer id;
     private Long primaryAccountNumber;
-    private String holder;
-    private Byte expMounth;
+    private Byte expMonth;
     private Integer expYear;
     private String internationalBrand;
     private Integer securityCode;

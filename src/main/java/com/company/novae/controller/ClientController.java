@@ -30,8 +30,8 @@ public class ClientController {
     }
 
     @PutMapping
-    public void updateByID(@RequestBody Client client) {
-        clientService.updateById(client);
+    public void update(@RequestBody Client client) {
+        clientService.update(client);
     }
 
     @DeleteMapping("/{id}")
