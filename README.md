@@ -43,16 +43,16 @@ CREATE DATABASE novae;
 
 ## RUTAS DEL API REST
 
-PATH: `/api/v1`
-ENDPOINTS: [
-    `/clients` -> GET, POST y PUT 
-    `/clients/{id}` -> GET y DELETE
-    `/clients/{id}/cards` -> GET (Punto 7.4)
-    `/clients/stored-process` -> PUT (Punto 7.2 - Procedimiento Almacenado)
-    `/credit-cards` -> GET, POST y PUT
-    `/credit-cards/{id}` -> GET y DELETE
-    `/franchises` -> GET, POST y PUT 
-    `/franchises/{id}` -> GET y DELETE
+1. PATH: `/api/v1`
+2. ENDPOINTS: [
+- `/clients` -> GET, POST y PUT 
+- `/clients/{id}` -> GET y DELETE
+- `/clients/{id}/cards` -> GET (Punto 7.4)
+- `/clients/stored-process` -> PUT (Punto 7.2 - Procedimiento Almacenado)
+- `/credit-cards` -> GET, POST y PUT
+- `/credit-cards/{id}` -> GET y DELETE
+- `/franchises` -> GET, POST y PUT 
+- `/franchises/{id}` -> GET y DELETE
 ]
 
 ## EJEMPLOS REGISTROS
