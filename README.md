@@ -1,8 +1,6 @@
-# NOMBRE DEL PROYECTO
-    BACKEND NOVAE - GESTIONAR TARGETAS DE CRÉDITO
+# BACKEND NOVAE - GESTIONAR TARGETAS DE CRÉDITO
 
-## DESCRIPCIÓN
-    Este aplicación permite realizar las operaciones correspondientes a un CRUD (Create, Read, Update and Delete) de las entidades client (cliente), franchise (franquicia) y credit card (targeta de crédito). Además, contiene consultas sql específicas para anaizar la información, incluyendo auditoría de JPA.
+Este aplicación permite realizar las operaciones correspondientes a un CRUD (Create, Read, Update and Delete) de las entidades client (cliente), franchise (franquicia) y credit card (targeta de crédito). Además, contiene consultas sql específicas para anaizar la información, incluyendo auditoría de JPA.
 
 ## INSTALACIÓN
     1. Descargar el proyeto en archivo .ZIP O clonarlo a través de Git.
