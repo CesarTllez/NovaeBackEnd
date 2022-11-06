@@ -7,7 +7,7 @@ Este aplicación permite realizar las operaciones correspondientes a un CRUD (Cr
 1. Descargar el proyeto en archivo .ZIP O clonarlo a través de Git.
 
 ```
-$ git clone url
+$ git clone https://github.com/CesarTllez/NovaeBackEnd.git
 ```
 
 2. Dentro del proyecto, actualizar MAVEN para descargar las dependencias necesarias.
