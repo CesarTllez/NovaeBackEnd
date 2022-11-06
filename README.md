@@ -44,22 +44,21 @@ CREATE DATABASE novae;
 ## RUTAS DEL API REST
 
 1. PATH: `/api/v1`
-2. ENDPOINTS: [
-- `/clients` -> GET, POST y PUT 
-- `/clients/{id}` -> GET y DELETE
-- `/clients/{id}/cards` -> GET (Punto 7.4)
-- `/clients/stored-process` -> PUT (Punto 7.2 - Procedimiento Almacenado)
-- `/credit-cards` -> GET, POST y PUT
-- `/credit-cards/{id}` -> GET y DELETE
-- `/franchises` -> GET, POST y PUT 
-- `/franchises/{id}` -> GET y DELETE
-]
+2. ENDPOINTS:
+    - `/clients` -> GET, POST y PUT 
+    - `/clients/{id}` -> GET y DELETE
+    - `/clients/{id}/cards` -> GET (Punto 7.4)
+    - `/clients/stored-process` -> PUT (Punto 7.2 - Procedimiento Almacenado)
+    - `/credit-cards` -> GET, POST y PUT
+    - `/credit-cards/{id}` -> GET y DELETE
+    - `/franchises` -> GET, POST y PUT 
+    - `/franchises/{id}` -> GET y DELETE
 
 ## EJEMPLOS REGISTROS
 
-PATH: /api/v1
-ENDPOINTS: [
-`/clients` -> POST
+1. PATH: /api/v1
+2. ENDPOINTS:
+- `/clients` -> POST
 
 ```
 {
@@ -69,7 +68,7 @@ ENDPOINTS: [
 }
 ```
 
-`/clients` -> PUT
+- `/clients` -> PUT
 
 ```
 {
@@ -80,7 +79,7 @@ ENDPOINTS: [
 }
 ```
 
-`/clients/stored-process` -> PUT
+- `/clients/stored-process` -> PUT
 
 ```
 {
@@ -90,7 +89,7 @@ ENDPOINTS: [
 }
 ```
 
-`/credit-cards` -> POST
+- `/credit-cards` -> POST
 
 ```
 {
@@ -109,7 +108,7 @@ ENDPOINTS: [
 }
 ```
 
-`/credit-cards` -> PUT
+- `/credit-cards` -> PUT
 
 ```
 {
@@ -121,7 +120,7 @@ ENDPOINTS: [
 }
 ```
 
-`/franchises` -> POST
+- `/franchises` -> POST
 
 ```
 {
@@ -129,7 +128,7 @@ ENDPOINTS: [
 }
 ```
 
-`/franchises` -> PUT
+- `/franchises` -> PUT
 
 ```
 {
@@ -139,8 +138,6 @@ ENDPOINTS: [
     "email": "franquiciactualizado@gmail.com"
 }
 ```
-
-]
 
 ## QUERIES
 
